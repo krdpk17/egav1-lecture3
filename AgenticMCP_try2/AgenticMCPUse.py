@@ -13,7 +13,7 @@ load_dotenv()
 # Access your API key and initialize Gemini client correctly
 api_key = os.getenv("GEMINI_API_KEY")
 client = genai.configure(api_key=api_key)
-model = genai.GenerativeModel("gemini-1.5-flash")
+model = genai.GenerativeModel("gemini-2.5-flash")
 
 max_iterations = 3
 last_response = None
@@ -140,7 +140,7 @@ Examples:
 DO NOT include any explanations or additional text.
 Your entire response should be a single line starting with either FUNCTION_CALL: or FINAL_ANSWER:"""
 
-                query = """Find the ASCII values of characters in INDIA and then return sum of exponentials of those values. """
+                query = """Find the ASCII values of characters in INDIA and then return minimum of  those values"""
                 print("Starting iteration loop...")
                 
                 # Use global iteration variables

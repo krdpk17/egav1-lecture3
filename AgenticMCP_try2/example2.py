@@ -24,6 +24,18 @@ def add_list(l: list) -> int:
     print("CALLED: add(l: list) -> int:")
     return sum(l)
 
+@mcp.tool()
+def max_list(l: list) -> int:
+    """Maximum of all numbers in a list"""
+    print("CALLED: max(l: list) -> int:")
+    return max(l)
+
+@mcp.tool()
+def min_list(l: list) -> int:
+    """Mim of all numbers in a list"""
+    print("CALLED: min(l: list) -> int:")
+    return min(l)
+
 # subtraction tool
 @mcp.tool()
 def subtract(a: int, b: int) -> int:
@@ -114,14 +126,6 @@ def mine(a: int, b: int) -> int:
     """special mining tool"""
     print("CALLED: mine(a: int, b: int) -> int:")
     return int(a - b - b)
-
-@mcp.tool()
-def create_thumbnail(image_path: str) -> Image:
-    """Create a thumbnail from an image"""
-    print("CALLED: create_thumbnail(image_path: str) -> Image:")
-    img = PILImage.open(image_path)
-    img.thumbnail((100, 100))
-    return Image(data=img.tobytes(), format="png")
 
 @mcp.tool()
 def strings_to_chars_to_int(string: str) -> list[int]:
